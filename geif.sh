@@ -1,7 +1,7 @@
-#!/bin/bas  h
+#!/bin/bash
 
-source "./lib/attr.sh"
-source "./lib/paint.sh"
+source "/etc/geif/lib/attr.sh"
+source "/etc/geif/lib/paint.sh"
 
 #ACKNOWLEDGE OF COMPULSORY PREVIOUS CONDITIONS
 
@@ -16,10 +16,6 @@ clear
 
 title
 
-tput sc 
-echo -e "[\e[33m2\e[0m]"
-tput rc
-
 stty -echo
 
 while true; do
@@ -27,7 +23,10 @@ while true; do
     case $key in
         1)
             tput sc
-			echo -e "[\e[93m1\e[0m][2][3]"
+
+			echo -e "[\e[93m1\e[0m][2][3]\n"
+			echo -e "\e[1mDetails\e[0m"
+			
 			tput rc
             ;;
         2)
@@ -40,7 +39,10 @@ while true; do
 			echo -e "[1][2][\e[93m3\e[0m]"
 			tput rc
             ;;
+		q)
+			clear
+			stty echo
+			exit
     esac
 done
 
-stty echo
