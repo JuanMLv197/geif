@@ -8,6 +8,6 @@ title(){
  |/___\|/___\|/___\|/___\|\e[0m\n"
 	
  	tput sc
- 	echo -e "[1][2][3] \e[1mPlease choose one of these options\[0m"
+ 	echo -e "[1][2][3] \e[1mPlease choose one of these options\e[0m"
 	tput rc
 }
