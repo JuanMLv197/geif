@@ -49,6 +49,6 @@ while true; do
 			clear
 			stty echo
 			exit
-    esac
+	esac
 done
 
