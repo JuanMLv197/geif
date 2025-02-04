@@ -14,7 +14,7 @@ fi
 
 clear
 
-title
+paint_title
 
 stty -echo
 
@@ -24,19 +24,25 @@ while true; do
         1)
             tput sc
 
-			echo -e "[\e[93m1\e[0m][2][3]\n"
-			echo -e "\e[1mDetails\e[0m"
-			
+			tput ed
+			paint_option "Details"				
+
 			tput rc
             ;;
         2)
 			tput sc
-			echo -e "[1][\e[93m2\e[0m][3]"
-            tput rc
+			
+			tput ed
+			paint_option "Edit"
+			
+			tput rc
 			;;
         3)
 			tput sc
-			echo -e "[1][2][\e[93m3\e[0m]"
+
+			tput ed
+			paint_option "Test"
+			
 			tput rc
             ;;
 		q)
